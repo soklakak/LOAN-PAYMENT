@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+    Moth : <input type="number" id="txtmoth" >
+    <button onclick="show()">show</button>
+
+    <table id="mytable" border="1"></table>
+    
+
+   
+<script>
+function show(){
+    let m = parseInt(document.getElementById("txtmoth").value);
+    let amt = 2000;
+    let interestRate = 3;
+
+    generrate(m, amt, interestRate);  
+}
+
+function generrate(month, amt, interestRate){
+    const table = document.getElementById('mytable');
+    
+    let html = '';
+
+    html += `<tr>
+                <td>No</td>
+                <td>Date</td>
+                <td>Amount</td>
+                <td>Interest</td>
+                <td>Total Payment</td>
+            </tr>`;
+
+    let total_interest = 0;
+    let total_amount = 0;
+
+    let monthlyPrincipal = amt / month;
+    let total_amt = amt;
+
+    for(let i = 1; i <= month; i++){
+        let interest = amt * interestRate / 100;
+        let total = monthlyPrincipal + interest;
+
+        total_interest += interest;
+        total_amount += total;
+
+        html += `<tr>
+                    <td>${i}</td>
+                    <td>Month ${i}</td>
+                    <td>${monthlyPrincipal.toFixed(2)}</td>
+                    <td>${interest.toFixed(2)}</td>
+                    <td>${total.toFixed(2)}</td>
+                </tr>`;
+
+        amt -= monthlyPrincipal;
+    }
+
+    html += `<tr>
+                <td colspan="2">Total</td>
+                <td>${total_amt.toFixed(2)}</td>
+                <td>${total_interest.toFixed(2)}</td>
+                <td>${total_amount.toFixed(2)}</td>
+            </tr>`;
+    
+   
+
+    table.innerHTML = html;
+}
+</script>
+       
+  
+</body>
+</html>

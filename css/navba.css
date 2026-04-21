@@ -1,0 +1,65 @@
+body {
+  background: #f4f6fb;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 230px;
+  background: #1f2a40;
+  min-height: 100vh;
+  border-radius: 0 20px 20px 0;
+}
+
+.sidebar .nav-item {
+  color: #ccc;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.sidebar .nav-item:hover,
+.sidebar .active {
+  background: #2f4cff;
+  color: white;
+  border-radius: 8px;
+}
+
+/* Cards */
+.gradient {
+  color: white;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.blue {
+  background: linear-gradient(135deg, #4c6ef5, #3b82f6);
+}
+
+.cyan {
+  background: linear-gradient(135deg, #22c1c3, #3a86ff);
+}
+
+.green {
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+/* Activity */
+.activity {
+  border-radius: 12px;
+}
+
+/* Header user */
+.user {
+  font-weight: bold;
+}
+.login{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding: 15px;
+
+}
+.user{
+    position: relative;
+    right: 50%;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Dashboard</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/navba.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+</head>
+
+<body>
+
+<div class="d-flex">
+
+  <!-- Sidebar -->
+  <div class="sidebar p-3">
+    <h4 class="text-white mb-4">LOAN PAYMENT
+</h4>
+    <ul class="nav flex-column">
+      <li class="nav-item"  onclick="show_db()">ការបង់រំលស់ការប្រាក់ថេ</li>
+      <li class="nav-item"  onclick=" show2_db()">ការបង់រំលស់ថយការប្រាក់</li>
+      <li class="nav-item"  onclick=" show3_db()">ការបង់រំលស់ដើមបីខែម្ដង</li>
+       <li class="nav-item text-danger" onclick="exitApp()"><i class="fa-solid fa-right-to-bracket"></i>ចាកចេញ</li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex-grow-1 p-4">
+
+    <!-- Header -->
+    <div class=" login d-flex justify-content-end      mb-4">
+      <div class="user">LOAN PAYMENT</i></div>
+      
+      <div class="icon"><i class="fa-solid fa-user"></i></div>
+    </div>
+
+    <!-- Top Cards -->
+    <div class="row g-3 mb-4">
+
+      <div class="col-md-4">
+        <div class="card gradient blue">
+          <h5>ការបង់រំលស់ការប្រាក់ថេ</h5>
+          <button class="btn btn-light btn-sm" id="show_db" onclick="show_db()">Show</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card gradient cyan">
+          <h5>ការបង់រំលស់ថយការប្រាក់</h5>
+          
+          <button class="btn btn-light btn-sm" onclick="show2_db()">Show</button>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card gradient green">
+          <h5>ការបង់រំលស់ដើមបីខែម្ដង</h5>
+          
+          <button class="btn btn-light btn-sm" onclick=" show3_db()">Show</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+<script src="/js/dashboard.js"></script>
+<script src="/js/dashboard2.js"></script>
+<script src="/js/dashboard3.js"></script>
+</html>
